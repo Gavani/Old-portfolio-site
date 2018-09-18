@@ -1,0 +1,72 @@
+/*===================== Welcome =====================*/
+.wrapper__auth{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    min-width: rem(319px);
+    text-align: center;
+
+    &:after{
+        content: "";
+        @include inlineblock(middle);
+        height: 100%;
+        width: 0;
+    }
+}
+
+.auth{
+    @include inlineblock(middle);
+    text-align: center;
+    position: relative;
+    width: rem(300px);
+    margin-top: rem(75px);
+}
+
+.auth__avatar{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: rem(140px);
+    height: rem(140px);
+    border: 2px solid #d6d6d6d6;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    @include transform(translate(-50%, -50%))
+
+}
+.avatar__pic{
+    position: absolute;
+    left: -99999px;
+    height: 0;
+}
+
+.auth__wrapper{
+    padding-top: rem(90px);
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.auth__name{
+    width: rem(220px);
+    margin: 0 auto rem(20px);
+    font-size: rem(21px);
+}
+.auth__btn{
+    background: $blue;
+    padding: rem(20px) 0;
+
+    .btn__link{
+        border-color: $white;
+        color: $white;
+        @include transition( .1s linear);
+
+        &:hover{
+            background: $white;
+            color: $blue;
+        }
+    }
+}

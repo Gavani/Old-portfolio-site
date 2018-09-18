@@ -1,0 +1,17 @@
+/*===================== Page Content =====================*/
+.page__content{
+    width: rem(700px);
+    float: right;
+    @include laptop{
+        width: 33.88889rem;
+    }
+    @include tablet{
+        width: 100%;
+    }
+}
+.title{
+    @include fira(medium);
+    color: $black;
+    font-size: rem(35px);
+    margin-bottom: rem(20px);
+}

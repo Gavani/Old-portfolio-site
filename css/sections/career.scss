@@ -1,0 +1,170 @@
+/*===================== Career =====================*/
+
+.career{
+    @extend %clearfix;
+}
+.career__head-title{
+    text-align: center;
+}
+.career__left{
+    width: rem(240px);
+    float: left;
+
+    @include tablet{
+        width: 30%;
+    }
+    @include phones{
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+.career__pic-img{
+    max-width: 100%;
+    height: rem(220px);
+    background: url(../img/content/univ.jpg) center no-repeat;
+    border-radius: 10px;
+
+    @include phones{
+        max-width: 60%;
+        margin: 0 auto;
+    }
+}
+.career__right{
+    width: rem(450px);
+    float: right;
+    text-align: right;
+
+    @include tablet{
+        width: 67%;
+    }
+    @include phones{
+        float: none;
+        width: 100%;
+    }
+}
+.career__item{
+    margin-bottom: rem(20px);
+    position: relative;
+    cursor: pointer;
+
+    &:first-child{
+        .career__block{
+            &:before{
+                display: none;
+            }
+        }
+    }
+    &:last-child{
+        .career__block{
+            &:after{
+                display: none;
+            }
+        }
+    }
+
+    &:hover{
+        .career__block{
+            background: $blue;
+        }
+        .career__title, .career__occ, .career__date{
+            color: $white;
+        }
+        .career__year{
+            &:after{
+                content: "";
+                display: block;
+                z-index: 2;
+                width: 21px;
+                height: 21px;
+                border-radius: 50%;
+                background: #94e0f2;
+                position: absolute;
+                top: 50%;
+                right: -31px;
+                @include transform(translate(0, -50%));
+            }
+        }
+    }
+}
+
+.career__block{
+    @include inlineblock();
+    width: rem(360px);
+    text-align: left;
+    background: $white;
+    @include shadow(0px 1px 3px 0px rgba(0, 0, 0, 0.2));
+    border-radius: 10px;
+    position: relative;
+    padding: rem(20px) rem(25px);
+    @include transition(.2s ease-in-out);
+
+    &:after, &:before{
+        content: "";
+        display: block;
+        width: 1px;
+        background: #dddddd;
+        position: absolute;
+        left: -30px;
+
+        @include phones{
+            display: none;
+        }
+    }
+    &:before{
+        top: 0;
+        bottom: 50%;
+        margin-bottom: 12px;
+    }
+    &:after{
+        bottom: -22px;
+        top: 50%;
+        margin-top: 11px;
+    }
+
+    @include tablet{
+        width: 80%;
+    }
+    @include phones{
+        width: 100%;
+    }
+}
+.career__title{
+    font-size: rem(21px);
+    color: #5a5a5a;
+}
+.career__occ, .career__date, .career__year{
+    @include fira(light);
+    color: $gray;
+}
+.career__year{
+    font-size: rem(14px);
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-right: 50px;
+    @include transform(translate(0, -50%));
+
+    &:before{
+        content: "";
+        display: block;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: $blue;
+        position: absolute;
+        z-index: 5;
+        top: 50%;
+        right: -26px;
+        @include transform(translate(0, -50%));
+    }
+
+    @include phones{
+        display: none;
+    }
+}
+
+  
+
+
+

@@ -1,0 +1,16 @@
+/*===================== btns =====================*/
+.btn__link{
+    display: inline-block;
+    padding: rem(10px) rem(15px);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 25px;
+    text-decoration: none;
+    @include transition( .1s linear);
+}
+.btn__icon, .btn__text{
+    vertical-align: middle;
+}
+.btn__icon{
+    margin-right: rem(7px);
+}

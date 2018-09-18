@@ -1,0 +1,102 @@
+/*===================== Sidebar =====================*/
+
+.sidebar{
+    width: rem(220px);
+    float: left;
+
+    @include tablet{
+        float: none;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    @include phones{
+        float: none;
+        width: 100%;
+        margin-bottom: rem(20px);
+    }
+}
+.sidebar__list-item{
+    text-align: right;
+    margin-bottom: rem(10px);
+
+    @include tablet{
+        display: inline-block;
+        padding-right: rem(30px);
+    }
+    @include phones{
+        display: inline-block;
+        padding-right: 1rem;
+        margin-bottom: 0;
+    }
+}
+.sidebar__list-item--active .sidebar__link{
+    border-right: 5px solid $blue;
+    color: $blue;
+    @include tablet{
+        border: none;    
+    }
+    @include phones{
+        border: none; 
+    }
+}
+.sidebar__list-item--active{
+    .sidebar__link-icon{
+        background-position-y: -50px;
+    }
+}
+.sidebar__link{
+    color: $black;
+    text-decoration: none;
+    @include inlineblock(middle);
+    padding: 15px 25px 5px 0;
+    border-right: 5px solid transparent;
+    @include transition();
+
+    &:hover{
+        color: $blue;
+        border-right-color: $blue;
+
+        .sidebar__link-icon{
+            background-position-y: -50px;
+        }
+    }
+    .svg-inline--fa{
+        vertical-align: middle;
+
+        @include phones{
+            display: none;
+        }
+    }
+    @include tablet{
+        border: none;
+        padding: 0;    
+    }
+    @include phones{
+        border: none;
+        padding: 0; 
+    }
+}
+.sidebar__link-text{
+    @include inlineblock(middle);
+    padding: 4px 0 0 10px;
+    max-width: 150px;
+
+    @include tablet{
+        padding-left: rem(5px);    
+    }
+    @include phones{
+        padding: 0;  
+        @include fira(medium);
+    }
+}
+
+.sidebar__link-icon{
+    background: url(../img/icons/portfolio-sprite.png) 0 0 no-repeat;
+    @include inlineblock(middle);
+    width: 18px;
+    height: 18px;
+
+    @include phones{
+        display: none;
+    }
+}

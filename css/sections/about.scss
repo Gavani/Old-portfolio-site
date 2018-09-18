@@ -1,0 +1,105 @@
+/*===================== About =====================*/
+.about{
+    @extend %clearfix;
+}
+.about__left{
+    width: rem(300px);
+    float: left;
+    text-align: center;
+    @include laptop{
+        width: 10.66667rem;
+    }
+
+    @include tablet{
+        width: 29%;
+    }
+    @include phones{
+        float: none;
+        width: 100%;
+    }
+}
+.about__right{
+    width: rem(380px);
+    float: right;
+
+    .title{
+        @include phones{
+            margin-bottom: 0;
+        }
+    }
+
+    @include laptop{
+        width: 22.11111rem;
+    }
+    @include tablet{
+    width: 69%;  
+    }
+    @include phones{
+        float: none;
+        width: 100%;
+    }
+}
+
+.about__pic{
+    width: rem(220px);
+    height: rem(220px);
+    border: 5px solid $white;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+
+    @include laptop{
+        width: 10.22222rem;
+        height: 10.22222rem;
+    }
+
+    @include tablet{
+        width: 9.22222rem;
+        height: 9.22222rem;
+    }
+}
+.about__pic-img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.about__title{
+    text-align: center;
+}
+.about__desc{
+    height: 21.66667rem;
+    overflow-y: scroll;
+    @include fira(light);
+    color: #646464;
+    padding-right: rem(20px);
+    margin-bottom: rem(50px);
+
+    @include tablet{
+        height: 25.66667rem;
+    }
+    @include phones{
+        height: 25.66667rem;
+        overflow-y: auto;
+        height: auto;
+        padding-right: 0;
+        margin: 0 0 rem(10px) rem(7px);
+        width: 95%;
+    }
+}
+
+.about__btns{
+    text-align: right;
+
+    .btn__link{
+        border-color: $red;
+        color: $red;
+
+        &:hover{
+            background: $red;
+            color: $white;
+        }
+    }
+    @include phones{
+        text-align: center
+    }
+}
+

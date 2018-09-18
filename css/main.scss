@@ -1,0 +1,26 @@
+//vars
+$white: #fff;
+$bg-white: #f6f6f6;
+$black: #414141;
+$gray: #727272;
+$blue: #33c1e3;
+$red: #e85f61;
+
+// Import adjustments for layout 
+@import "layout/fonts";
+@import "layout/mixins";
+@import "layout/normalize";
+@import "layout/adjustments";
+
+//Import components
+@import "components/header.scss";
+@import "components/sidebar.scss";
+@import "components/btns.scss";
+@import "components/content.scss";
+@import "components/footer.scss";
+
+//Import sections
+@import "sections/welcome.scss";
+@import "sections/about.scss";
+@import "sections/career.scss";
+@import "sections/portfolio.scss";

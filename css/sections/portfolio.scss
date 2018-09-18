@@ -1,0 +1,99 @@
+/*===================== Portfolio =====================*/
+
+.portfolio__head-title{
+    text-align: center;
+}
+.portfolio__list{
+    font-size: 0;
+    margin-left: rem(-20px);
+
+    @include phones{
+        text-align: center;
+    }
+}
+.portfolio__link{
+    display: block;
+    text-decoration: none;
+    color: $black;
+}
+.portfolio__item{
+    width: rem(220px);
+    font-size: rem(18px);
+    @include inlineblock();
+    margin: 0 0 rem(20px) rem(20px);
+    border-radius: 10px;
+    overflow: hidden;
+    @include shadow(0px 1px 3px 0px rgba(0, 0, 0, 0.2));
+    background-color: rgb(255, 255, 255);
+
+    &:hover{
+        .portfolio__desc-title{
+            color: $red;
+        }
+    }
+    
+    @include laptop{
+        width: 30%;
+    }
+    @include tablet{
+        width: 30%;
+    }
+    @include phones{
+        width: 20rem;
+    }
+}
+.portfolio__pic{
+    width: 100%;
+    height: rem(175px);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include phones{
+        height: 16.3333rem;
+    }
+}
+.portfolio__img{
+    position: absolute;
+    left: -9999px;
+}
+.portfolio__desc{
+    padding: rem(20px);
+
+    @include phones{
+        text-align: left;
+    }
+}
+.portfolio__desc-title{
+    font-size: rem(21px);
+    color: $blue;
+    @include transition(.1s linear);
+
+    @include phones{
+        font-size: rem(24px);
+    }
+}
+.portfolio__desc-text{
+    font-size: rem(14px);
+    margin-bottom: rem(15px);
+
+    @include phones{
+        font-size: 16px;
+    }
+}
+.desc-type__icon, .desc-type__text{
+    @include inlineblock(middle);
+    color: #aeaeae;
+}
+.desc-type__icon{
+    max-width: 19%;
+}
+.desc-type__text{
+    max-width: 79%;
+    @include fira(bold);
+    font-size: rem(14px);
+
+    @include phones{
+        font-size: 14px;
+    }
+}
